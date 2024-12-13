@@ -8,7 +8,7 @@ import webbrowser
 install = 0
 
 def home():
-    print('Welcome to cmdOS 1.0! there is currently 1 app:')
+    print('Welcome to cmdOS 1.2! there are currently 3 apps:')
     print('nomaakip     freakybob   neko    miku')
     app = input()
     if app == 'freakybob':
