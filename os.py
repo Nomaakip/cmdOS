@@ -104,7 +104,7 @@ def code2():
 
 def swagos():
 
-    print("Welcome to terminal OS! installing...")
+    print("Welcome to cmdOS! installing...")
     print("make sure you are connected to the internet before continuing!")
     time.sleep(3)
     url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/miku.txt'
