@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About nomaakip</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    * {
+    background: url('https://i.gifer.com/9Szz.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover;
+}
+.card {
+    height:95vh;
+    width: 95vm;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.github {
+    background: none;
+    height:50px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 30px white;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    margin-left:39%;
+}
+
+.github:hover {
+    transform: scale(1.1);
+    transform:
+      rotate3d(0,0,0,0deg)
+      rotate(0deg);
+}
+
+.discord {
+    background: none;
+    height:50px;
+    margin-bottom: -5px;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(#FFFFFF 1px 0 7px) !important;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+.discord:hover {
+    transform: scale(1.1);
+    transform:
+      rotate3d(0,0,0,0deg)
+      rotate(0deg);
+}
+
+.swag {
+    height:200px;
+    width:600px;
+    background: none;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1)rgba(255,255,255,0)) ;
+    border: 1px solid rgba(255,255,2555,0.18);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,37);
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    padding:30px;
+    animation:pop-in 0.5s ease;
+    transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+}
+
+.swag:hover {
+    transform:
+    rotate3d(.5,-.866,0,15deg)
+    rotate(1deg);
+  box-shadow:
+    2em 4em 6em -2em rgba(0,0,0,.5),
+    1em 2em 3.5em -2.5em rgba(0,0,0,.5);
+  border-radius: .5em;
+}
+
+.username {
+    background: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 50px;
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+.pfp {
+    
+    height:140px;
+    width:140px;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.usr {
+    display: flex;
+}
+
+.about {
+    background:none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    margin-left: 10px;
+
+}
+
+.heart {
+box-shadow: 0px 0px 10px black;
+height: 30px; 
+display:inline-block;
+margin-top: 65px;
+margin-left:20px;
+animation: rainbow 2s infinite;
+aspect-ratio: 1;
+--_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+-webkit-mask-box-image: var(--_m);
+ mask-border: var(--_m);
+clip-path: polygon(-41% 0,50% 91%, 141% 0);
+background: #cc333f;
+}
+
+@supports not (-webkit-mask-box-image: var(--_m)) { 
+.heart {
+mask:
+radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+conic-gradient(#000 0 0) bottom/100% 50% no-repeat;
+}
+}
+
+.heartsabt {
+background-image: none;
+font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 30px;
+    width: 70px;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 8px;
+    color:white;
+    margin-top: 20px;
+    margin-left: -50px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.464);
+    display: none;
+    animation:pop-in 0.5s ease;
+}
+
+.heart:hover + .heartsabt {
+display: block;
+}
+
+
+@keyframes anim {
+0% {
+opacity: 0%;
+margin-bottom: 0px;
+}
+25% {
+opacity: 25%;
+margin-bottom: 5px;
+}
+
+50% {
+opacity: 50%;
+margin-bottom: 10px;
+}
+
+75% {
+opacity: 75%;
+margin-bottom: 15px;
+}
+
+100% {
+opacity: 100%;
+margin-bottom:20px;
+}
+}
+
+@keyframes rainbow {
+10% {
+background-color: red;
+}
+20% {
+background-color: blue;
+}
+30% {
+background-color: yellow;
+}
+50% {
+background-color: purple;
+}
+
+75% {
+background-color: aqua;
+}
+
+100% {
+background-color: fuchsia;
+}
+
+}
+
+@keyframes pop-in {
+0% { opacity: 0;transform: scale(0.1); }
+100% { opacity: 1;transform: scale(1); }
+}
+</style>
+    </head>
+    <body>
+        <audio autoplay loop><source src="music/doodle.mp3" type="audio/mp3"></audio>
+        <div class="card">
+        <div class="swag">
+            <div class="usr" style="position: relative; margin-left:0px; margin-top:-22px; margin-right:5px; padding-top: 20px; background: none;">
+                <img src="images/9d058db6-36a9-4bc0-b3a2-60aed0cb1a85.jpg" alt="pfp" class="pfp">
+            <h1 class ="username">nomaakip!</h1>
+            <div class="heart"></div>
+            <div class="heartsabt">swag</div>
+            </div>
+            <h1 class="about">C++ and web developer</h1>
+            <a href="https://github.com/nomaakip" style="background: none;"><img src="images/github.png" class="github"></a>
+            <img src="images/f53497173cbd3e295990d985271cedda.png" class="discord">
+        </div>
+        </div>
+    </body>
+</html>
