@@ -6,11 +6,59 @@ import socket
 import webbrowser
 
 install = 0
+nomaakip = 1
 
 def home():
-    print('Welcome to cmdOS 1.2! there are currently 4 apps:')
-    print('nomaakip     freakybob   neko    miku')
+    print('Welcome to cmdOS 1.4-nightly! there are currently 4 apps:')
+    print(' freakybob   neko    miku    app_store')
     app = input()
+
+    if app == 'app_store':
+        print('--------------------------------------------------------')
+        print('Welcome to the app store:there is currently 1 app that you can download!')
+        print('--------------------------------------------------------')
+        print('nomaakip')
+        print('--------------------------------------------------------')
+        downl = input()
+        if downl == 'nomaakip':
+            print('download nomaakip.app? (36kb)')
+            print('Downloading nomaakip.html')
+            nomaakip =+ 1
+            url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/nomaakip.html'
+            response = requests.get(url)
+            file_Path = 'nomaakip.html'
+            response = requests.get(url)
+            if response.status_code == 200:
+                with open(file_Path, 'wb') as file:
+                 file.write(response.content)
+                 print('File downloaded successfully')
+                 print("50% done")
+            else:
+             print('Download failed!Check your internet connection.')
+            url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/9d058db6-36a9-4bc0-b3a2-60aed0cb1a85.jpg'
+            file_Path = '9d058db6-36a9-4bc0-b3a2-60aed0cb1a85.jpg'
+            response = requests.get(url)
+            if response.status_code == 200:
+                with open(file_Path, 'wb') as file:
+                 file.write(response.content)
+                 print('File downloaded successfully')
+                
+            else:
+             print('Download failed!Check your internet connection.')
+
+            url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/github.png'
+            file_Path = 'github.png'
+            response = requests.get(url)
+            if response.status_code == 200:
+                with open(file_Path, 'wb') as file:
+                 file.write(response.content)
+                 print('File downloaded successfully')
+                 print('--------------------------------------------------------')
+                 print('nomaakip.app downloaded successfully')
+            else:
+             print('Download failed!Check your internet connection.')
+
+
     if app == 'freakybob':
         freaky = open("freakybob.txt", "r")
         print(freaky.read())
@@ -26,37 +74,68 @@ def home():
         print(neko.read())
         neko.close()
         code2()
-
-    elif app == 'nomaakip':
-        url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/9d058db6-36a9-4bc0-b3a2-60aed0cb1a85.jpg'
-        file_Path = '9d058db6-36a9-4bc0-b3a2-60aed0cb1a85.jpg'
-        response = requests.get(url)
-        if response.status_code == 200:
-            with open(file_Path, 'wb') as file:
-                file.write(response.content)
-                print('File downloaded successfully')
-                
-        else:
-         print('Download failed!Check your internet connection.')
-
-         url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/github.png'
-         file_Path = 'github.png'
-         response = requests.get(url)
-         if response.status_code == 200:
-            with open(file_Path, 'wb') as file:
-                file.write(response.content)
-                print('File downloaded successfully')
-                
-         else:
-          print('Download failed!Check your internet connection.')
-        RdFile = webbrowser.open(r'nomaakip.html') 
-        print('going to nomaakip.github.io')
+    if install == 0:
+        print('--------------------------------------------------------')
+        print('apps from app store:')
+        print('nomaakip(make sure you downloaded it from the app store)')
+        app = input()
+        if app == 'nomaakip':
+          RdFile = webbrowser.open(r'nomaakip.html') 
+          print('going to nomaakip.github.io')
     else:
          code2()
-    code2()
+    home()
 
 def code2():
     app = input()
+
+    if app == 'app_store':
+        print('--------------------------------------------------------')
+        print('Welcome to the app store:there is currently 1 app that you can download!')
+        print('--------------------------------------------------------')
+        print('nomaakip')
+        print('--------------------------------------------------------')
+        downl = input()
+        if downl == 'nomaakip':
+            print('download nomaakip.app? (36kb)')
+            print('Downloading nomaakip.html')
+            nomaakip =+ 1
+            url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/nomaakip.html'
+            response = requests.get(url)
+            file_Path = 'nomaakip.html'
+            response = requests.get(url)
+            if response.status_code == 200:
+                with open(file_Path, 'wb') as file:
+                 file.write(response.content)
+                 print('File downloaded successfully')
+                 print("50% done")
+            else:
+             print('Download failed!Check your internet connection.')
+            url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/9d058db6-36a9-4bc0-b3a2-60aed0cb1a85.jpg'
+            file_Path = '9d058db6-36a9-4bc0-b3a2-60aed0cb1a85.jpg'
+            response = requests.get(url)
+            if response.status_code == 200:
+                with open(file_Path, 'wb') as file:
+                 file.write(response.content)
+                 print('File downloaded successfully')
+                
+            else:
+             print('Download failed!Check your internet connection.')
+
+            url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/github.png'
+            file_Path = 'github.png'
+            response = requests.get(url)
+            if response.status_code == 200:
+                with open(file_Path, 'wb') as file:
+                 file.write(response.content)
+                 print('File downloaded successfully')
+                 print('--------------------------------------------------------')
+                 print('nomaakip.app downloaded successfully')
+                 print('--------------------------------------------------------')
+                 nomaakip = True
+            else:
+             print('Download failed!Check your internet connection.')
+
     if app == 'freakybob':
         freaky = open("freakybob.txt", "r")
         print(freaky.read())
@@ -74,37 +153,23 @@ def code2():
         neko.close()
         code2()
 
-    elif app == 'nomaakip':
-        url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/9d058db6-36a9-4bc0-b3a2-60aed0cb1a85.jpg'
-        file_Path = '9d058db6-36a9-4bc0-b3a2-60aed0cb1a85.jpg'
-        response = requests.get(url)
-        if response.status_code == 200:
-            with open(file_Path, 'wb') as file:
-                file.write(response.content)
-                print('File downloaded successfully')
-                
-        else:
-         print('Download failed!Check your internet connection.')
+    if install == 0:
+        print('--------------------------------------------------------')
+        print('apps from app store:')
+        print('--------------------------------------------------------')
+        print('nomaakip')
+        app = input()
+        if app == 'nomaakip':
+          RdFile = webbrowser.open(r'nomaakip.html') 
+          print('going to nomaakip.github.io')
 
-         url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/github.png'
-         file_Path = 'github.png'
-         response = requests.get(url)
-         if response.status_code == 200:
-            with open(file_Path, 'wb') as file:
-                file.write(response.content)
-                print('File downloaded successfully')
-                
-         else:
-          print('Download failed!Check your internet connection.')
-        RdFile = webbrowser.open(r'nomaakip.html') 
-        print('going to nomaakip.github.io')
     else:
          code2()
     code2()
 
 def swagos():
 
-    print("Welcome to cmdOS! installing...")
+    print("Welcome to  cmdOS! installing...")
     print("make sure you are connected to the internet before continuing!")
     time.sleep(3)
     url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/miku.txt'
@@ -116,25 +181,13 @@ def swagos():
             with open(file_Path, 'wb') as file:
                 file.write(response.content)
                 print('File downloaded successfully')
-                print("10% done")
+                print("30% done")
     else:
          print('Download failed!Check your internet connection.')
     print("installing neko.txt")
     url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/neko.txt'
     response = requests.get(url)
     file_Path = 'neko.txt'
-    response = requests.get(url)
-    if response.status_code == 200:
-            with open(file_Path, 'wb') as file:
-                file.write(response.content)
-                print('File downloaded successfully')
-                print("20% done")
-    else:
-         print('Download failed!Check your internet connection.')
-    print('Downloading nomaakip.html')
-    url = 'https://raw.githubusercontent.com/Nomaakip/cmdOS/refs/heads/main/nomaakip.html'
-    response = requests.get(url)
-    file_Path = 'nomaakip.html'
     response = requests.get(url)
     if response.status_code == 200:
             with open(file_Path, 'wb') as file:
